@@ -5,9 +5,13 @@ using IOCM.LifeTime;
 namespace IOCM
 {
     
-    public partial class IoCContainer
+    public partial class IoCContainer : IDisposable
     {
-        private static readonly IDictionary<Type, IInstanceLifeTime> types = new Dictionary<Type, IInstanceLifeTime>();
-        
+        private readonly IDictionary<Type, IInstanceLifeTime> types = new Dictionary<Type, IInstanceLifeTime>();
+
+        public void Dispose()
+        {
+            this.types.Clear();
+        }
     }
 }
