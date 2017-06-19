@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCContainer", "IoCContainer\IoCContainer.csproj", "{095CE839-B16B-47E6-917D-D794037B735D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOCM", "IOCM\IOCM.csproj", "{DE57FC70-3120-476A-9286-8D4C46A57FEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOCMTest", "IOCMTest\IOCMTest.csproj", "{59F2BC5C-6464-405A-9859-245C2E27C50E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{095CE839-B16B-47E6-917D-D794037B735D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{095CE839-B16B-47E6-917D-D794037B735D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{095CE839-B16B-47E6-917D-D794037B735D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{095CE839-B16B-47E6-917D-D794037B735D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE57FC70-3120-476A-9286-8D4C46A57FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE57FC70-3120-476A-9286-8D4C46A57FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE57FC70-3120-476A-9286-8D4C46A57FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE57FC70-3120-476A-9286-8D4C46A57FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F2BC5C-6464-405A-9859-245C2E27C50E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F2BC5C-6464-405A-9859-245C2E27C50E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F2BC5C-6464-405A-9859-245C2E27C50E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F2BC5C-6464-405A-9859-245C2E27C50E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
