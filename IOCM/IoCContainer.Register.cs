@@ -10,9 +10,8 @@ namespace IOCM
         /// <summary>
         /// Registers Interface with the corresponding class. Default LifeTime is Transient. 
         /// </summary>
-        public void Register<TContract, TImplementation>() 
-            where TContract : class 
-            where TImplementation : class
+        public void Register<TContract, TImplementation>()
+            where TImplementation : TContract
         {
             Register<TContract, TImplementation>(LifeTimeStyle.Transient);
         }
@@ -21,8 +20,7 @@ namespace IOCM
         /// Registers Interface with the corresponding class. LifeTime options can be used.
         /// </summary>
         public void Register<TContract, TImplementation>(LifeTimeStyle lsType)
-            where TContract : class
-            where TImplementation : class
+            where TImplementation : TContract
         {
             if (types.ContainsKey(typeof(TContract)))
                 throw new Exception(string.Format("Type {0} already registered.", typeof(TContract).FullName));

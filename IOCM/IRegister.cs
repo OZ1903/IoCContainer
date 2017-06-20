@@ -5,11 +5,9 @@ namespace IOCM
     interface IRegister
     {
         void Register<I, C>()
-            where I : class
-            where C : class;
+            where C : I;
 
         void Register<I, C>(LifeTimeStyle lt)
-            where I : class
-            where C : class;
+            where C : I;
     }
 }
