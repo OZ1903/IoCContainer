@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace IOCMTest
 {
-    public sealed class ImportAttribute : Attribute
-    {
-    }
-
    
-
     public interface ITimeProvider
     {
         DateTime GetCreatedOn();
