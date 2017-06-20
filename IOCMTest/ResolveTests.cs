@@ -26,6 +26,22 @@ namespace IOCMTest
         }
 
         [TestMethod]
+        public void Resolve_SingletonLifeTimeForSameConcrete_TwoInstancesEqual()
+        {
+            //Arrange
+            var container = ContainerFactory.New();
+            container.Register<RealTimeProvider>(LifeTimeStyle.Singleton);
+
+            //Act
+            var instance1 = container.Resolve<RealTimeProvider>();
+            Thread.Sleep(2000);
+            var instance2 = container.Resolve<RealTimeProvider>();
+
+            //Assert
+            Assert.AreEqual(instance1.GetCreatedOn(), instance2.GetCreatedOn());
+        }
+
+        [TestMethod]
         public void Resolve_TransientLifeTime_TwoInstancesNotEqual()
         {
             //Arrange
@@ -40,7 +56,23 @@ namespace IOCMTest
             //Assert
             Assert.AreNotEqual(instance1.GetCreatedOn(), instance2.GetCreatedOn());
         }
-        
+
+        [TestMethod]
+        public void Resolve_TransientLifeTimeForSameConcrete_TwoInstancesNotEqual()
+        {
+            //Arrange
+            var container = ContainerFactory.New();
+            container.Register<RealTimeProvider>();
+
+            //Act
+            var instance1 = container.Resolve<RealTimeProvider>();
+            Thread.Sleep(2000);
+            var instance2 = container.Resolve<RealTimeProvider>();
+
+            //Assert
+            Assert.AreNotEqual(instance1.GetCreatedOn(), instance2.GetCreatedOn());
+        }
+
         [TestMethod]
         public void Resolve_MissingDependency_ThrowsMissingRegistration()
         {
